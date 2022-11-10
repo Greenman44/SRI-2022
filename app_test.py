@@ -1,10 +1,13 @@
-
-
-
-
+from library.parser import parse_dataset_from_path
 from pathlib import Path
+import pandas as pd
 
-base = Path(r'D:\Cibernética\!!!!Tercer año\SRI\20news-bydate-train\alt.atheism\49960')
 
-text = base.read_text()
-print(text.strip("\n"))
+file = Path(r'D:\Cibernética\!!!!Tercer año\SRI\20news-bydate-train')
+
+data = parse_dataset_from_path(file, "20NewGroups")
+
+
+
+
+print(data)
