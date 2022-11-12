@@ -3,7 +3,7 @@ from library.datasets import Dataset
 
 docs = Dataset("Prueba")
 
-print(docs[2,2,2])
+print(len(docs))
 print("*************************************************************")
 
 # basePath = getcwd() + "\\datasets\\Prueba_data.json"
