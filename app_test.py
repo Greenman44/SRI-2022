@@ -1,13 +1,17 @@
-from library.parser import parse_dataset_from_path
-from pathlib import Path
-import pandas as pd
+from library.datasets import Dataset
 
 
-file = Path(r'D:\Cibernética\!!!!Tercer año\SRI\20news-bydate-train')
+docs = Dataset("Prueba")
 
-data = parse_dataset_from_path(file, "20NewGroups")
+print(docs[2,2,2])
+print("*************************************************************")
 
+# basePath = getcwd() + "\\datasets\\Prueba_data.json"
+# df = pd.read_json(basePath, orient="body")
 
-
-
-print(data)
+# docs = df["body"]
+# docs = docs.map(lambda x: re.sub('[,\.!?()1234567890=;:$%&#]', '', x))
+# docs = docs.map(lambda x: re.sub(r'[^a-zA-Z0-9.\s]', ' ', x))  # Replace all non-alphanumeric characters with space
+# docs = docs.map(lambda x: re.sub(r'[^a-zA-Z0-9\s]', '', x))  # Remove all dots, e.g. U.S.A. becomes USA
+# docs = docs.map(lambda x: x.lower())
+# docs = docs.map(lambda x: x.strip())

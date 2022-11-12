@@ -6,7 +6,9 @@ def parse_dataset_from_path(path : str, name : str) -> list[dict]:
     """Parser for datasets coming from a directory
 
     Args:
-        path (str): path of dataset
+        path (str): path of current dataset
+
+        name (str): name of current dataset
 
     Returns:
         list (dict): Keys : ("name", "path", "body")
@@ -55,10 +57,13 @@ def process_folder(folder : Path) -> list[dict]:
     for file in files:
         if file.is_dir():
             continue
+        body = file.read_text()
+        body = body.replace("\n", "").replace("\r", "")
+        
         data = {
             "name" : file.name,
             "path" : str(file.absolute()),
-            "body" : file.read_text() 
+            "body" : body 
         }
         folder_data.append(data)
 
