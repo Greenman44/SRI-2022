@@ -1,10 +1,16 @@
 from library.datasets import Dataset
-
+from library.models import VectorialModel
 
 docs = Dataset("Prueba")
 
-print(len(docs))
+vectorial_Model = VectorialModel(docs)
+
+rank = vectorial_Model.EvalQuery("I hate economic and stupid political")
+
+
+print(rank)
 print("*************************************************************")
+print(docs[1,"allan"])
 
 # basePath = getcwd() + "\\datasets\\Prueba_data.json"
 # df = pd.read_json(basePath, orient="body")
