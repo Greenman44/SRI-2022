@@ -26,9 +26,9 @@ def parse_dataset_from_path(path : str, name : str) -> list[dict]:
             files.append(item)
 
     for folder in folders: 
-        data = process_folder(folder)
+        data = _process_folder(folder)
         finalData.extend(data)
-    data = process_folder(basePath)
+    data = _process_folder(basePath)
     finalData.extend(data)
     dataset_path = getcwd() + f"\\datasets\\{name}_data.json"
     try:
@@ -41,7 +41,7 @@ def parse_dataset_from_path(path : str, name : str) -> list[dict]:
     return "success"
 
 
-def process_folder(folder : Path) -> list[dict]:
+def _process_folder(folder : Path) -> list[dict]:
     """convert files into dict and append them to the folder data 
 
     Args:

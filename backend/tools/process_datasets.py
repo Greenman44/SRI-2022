@@ -1,14 +1,21 @@
 from nltk.stem import PorterStemmer
 import pandas as pd
 import re
-import nltk
-# nltk.download("stopwords")
-# nltk.download('punkt')
+
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from os import getcwd
 from sklearn.feature_extraction.text import CountVectorizer
 
+
+def filter_corpus(corpus : str, keywords : set = set()):
+    ps = PorterStemmer()
+    stwords = set(stopwords.words('english'))
+    stwords = stwords - keywords
+    doc_tokenized = word_tokenize(corpus)
+    doc_review = [ps.stem(word) for word in doc_tokenized if not word in stwords]
+    doc_review = ' '.join(doc_review)
+    return doc_review
 
 def process_datasets(*names : str) -> tuple :
     """method for process documents dataset
@@ -37,13 +44,10 @@ def process_datasets(*names : str) -> tuple :
         documents = documents.map(lambda x: x.lower())
         documents = documents.map(lambda x: x.strip())
 
-        ps = PorterStemmer()
-        stwords = set(stopwords.words('english'))
+        
         
         for doc in documents:
-            doc_tokenized = word_tokenize(doc)
-            doc_review = [ps.stem(word) for word in doc_tokenized if not word in stwords]
-            doc_review = ' '.join(doc_review)
+            doc_review = filter_corpus(doc)
             corpus.append(doc_review)
         
     cv = CountVectorizer()
