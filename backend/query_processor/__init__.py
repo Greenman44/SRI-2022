@@ -1,3 +1,3 @@
-from .queryProcessor import VectorialQueryProcessor, BooleanQueryProcessor
+from .queryProcessor import VectorialQueryProcessor, BooleanQueryProcessor, LSIQueryProcessor
 
-__all__ = ["VectorialQueryProcessor", "BooleanQueryProcessor"]
+__all__ = ["VectorialQueryProcessor", "BooleanQueryProcessor", "LSIQueryProcessor"]

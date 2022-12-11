@@ -62,6 +62,13 @@ class Dataset:
         dimension = list(np.shape(self.freq_matrix))
         return dimension[0]
 
-
+    def getAllOcurrences(self, term : str):
+        result = 0
+        for i in range(len(self)):
+            try:
+                result += self[i, term]
+            except Exception as e:
+                raise e
+        return result
 
 

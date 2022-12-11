@@ -5,6 +5,7 @@ from nltk.stem import PorterStemmer
 from boolean import BooleanAlgebra
 from sympy import sympify
 from ..datasets import Dataset
+from ..tools import filter_corpus
 
 class QueryProcessor:
     def __init__(self, query : str):
@@ -13,7 +14,7 @@ class QueryProcessor:
     def processQuery(self):
         pass
     
-    def weightUp_query(self, queryDataset : Dataset, docs_idf, docs_vocabulary : list[str]):
+    def weightUp_query(self):
         pass
 
 
@@ -22,9 +23,9 @@ class VectorialQueryProcessor(QueryProcessor):
         super().__init__(query)
     
     def processQuery(self):
-        stwords = set(stopwords.words('english'))
-        cv = CountVectorizer(stop_words= list(stwords))
-        matrixFreqs = cv.fit_transform([self.query])
+        query = filter_corpus(self.query)
+        cv = CountVectorizer()
+        matrixFreqs = cv.fit_transform([query])
         vocabulary = cv.get_feature_names_out()
 
         return Dataset(freq_matrix=matrixFreqs, vocabulary=vocabulary)
@@ -57,6 +58,17 @@ class BooleanQueryProcessor(QueryProcessor):
         except Exception as e:
             raise e
             
+class LSIQueryProcessor(QueryProcessor):
+
+    def __init__(self, query: str):
+        super().__init__(query)
+    
+    def processQuery(self):
+        query = filter_corpus(self.query)
+        cv = CountVectorizer()
+        matrixFreqs = cv.fit_transform([query])
+        vocabulary = cv.get_feature_names_out()
+        return Dataset(freq_matrix=matrixFreqs, vocabulary=vocabulary)
 
        
 

@@ -1,17 +1,18 @@
 
-from backend import Dataset, BooleanModel, VectorialModel
+from backend import Dataset, BooleanModel, VectorialModel, LSIModel
+from sympy import to_dnf
+from boolean import BooleanAlgebra
 
 # aquí especificar el dataset con el que se va  a trabajar("Prueba", "cranfield", "20NewGroups")
 # alguno de los que están entre paréntesis
 docs = Dataset("Prueba")
 
-boolean_Model = BooleanModel(docs)
+lsi_Model = LSIModel(docs)
 
 # aquí escribir la query
-rank = boolean_Model.EvalQuery("hate and policy")
+rank = lsi_Model.EvalQuery("communism policy and economy")
 
-# a =BooleanAlgebra()
-# exp = a.parse("x and not b")
-# exp = sympify(str(exp))
+
+
 print(rank)
 print("*************************************************************")
