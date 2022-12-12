@@ -1,4 +1,3 @@
-from .datasets import Dataset
-from .ri_models import VectorialModel, BooleanModel, LSIModel
+from .run import run
 
-__all__ = ["Dataset", "VectorialModel", "BooleanModel", "LSIModel"]
+__all__ = ["run"]

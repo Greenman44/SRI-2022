@@ -47,11 +47,10 @@ class VectorialModel(Models):
     def EvalQuery(self, query):
         processor = VectorialQueryProcessor(query)
         dataSQuery = processor.processQuery()
-        tfidf_Transformer = TfidfTransformer(smooth_idf=False)
         vocDataQuery = dataSQuery.vocabulary
         sim = []
         query_weights = processor.weightUp_query(
-            dataSQuery, tfidf_Transformer.idf_, self.dataS.vocabulary
+            dataSQuery, self.idfs , self.dataS.vocabulary
         )
         for doc in range(len(self.dataS_weight)):
             sim.append(doc)
@@ -73,6 +72,7 @@ class VectorialModel(Models):
     def _weightUp_terms(self):
         tfidf_Transformer = TfidfTransformer(smooth_idf=False)
         weight = tfidf_Transformer.fit_transform(self.dataS.freq_matrix)
+        self.idfs =  tfidf_Transformer.idf_
         self.dataS_weight = Dataset(freq_matrix=weight, vocabulary=self.dataS.vocabulary)
         
 
@@ -135,10 +135,12 @@ class LSIModel(Models):
         return newSet
 
 def _Rank(sim: list[float], doc):
-        for i in range(len(sim)):
-            for j in range(i + 1, len(sim)):
-                if sim[i] < sim[j]:
-                    sim[i], sim[j] = sim[j], sim[i]
-                    doc[i], doc[j] = doc[j], doc[i]
+    print(sim)
+    print("**********************************************")
+    for i in range(len(sim)):
+        for j in range(i + 1, len(sim)):
+            if sim[i] < sim[j]:
+                sim[i], sim[j] = sim[j], sim[i]
+                doc[i], doc[j] = doc[j], doc[i]
 
-        return doc
+    return doc
