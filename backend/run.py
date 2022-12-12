@@ -10,18 +10,15 @@ def run(doc_set : str, model : str, query : str):
         with open(basePath) as data_json:
             data = list(json.load(data_json))
             data_json.close()
-        
-
-
     except Exception as e:
         raise e
     
 
-    models = {
-        "BooleanModel" :  BooleanModel(dataS),
+    models = {"BooleanModel" :  BooleanModel(dataS),
         "VectorialModel" : VectorialModel(dataS),
         "LSIModel" : LSIModel(dataS)
     }
+    
     try : 
        rank = models[model].EvalQuery(query)
     except Exception as e:
