@@ -15,13 +15,6 @@ class Google:
         self.window.config(background="white")
         self.doc=None
 
-        # frame2 = Frame(self.root)
-        # frame2.grid(row=0, column=0, sticky='ns')
-
-        # self.frame2=frame2
-        # # Add a canvas in that frame.
-        # 
-
         Label(
             self.window,
             text="Select the Dataset of documents to use in your search :",
@@ -108,22 +101,18 @@ class Google:
         self.canvas.configure(scrollregion=self.canvas.bbox('all'))
 
     def Begin(self):
-        self.lf= Frame(self.window,name='documents')
-        self.lf.grid(row=6,column=0,columnspan=10,sticky='ns')
+        self.canvas = Canvas(self.window,height=500,width=1000,background="white")
+        self.canvas.grid(column=0,row=10,columnspan=10)
 
-        self.canvas = Canvas(self.lf,background="white")
-        self.canvas.grid(column=0, row=0)
+        scrollbar = Scrollbar(self.window, command=self.canvas.yview)
+        scrollbar.grid(column=21,row=10)
+
+        self.canvas.configure(yscrollcommand = scrollbar.set)
         
-        
-        scrollbar = Scrollbar(
-                self.lf,
-                orient='vertical',
-                command=self.canvas.yview
-            )
-        scrollbar.grid(row=0, column=1, sticky='ns')
-        self.canvas.config(yscrollcommand=scrollbar.set)
-        print(self.canvas.bbox('all'))
-        
+        self.canvas.bind('<Configure>', self.on_configure)
+
+        self.frame= Frame(self.canvas)
+        self.canvas.create_window((0,10),window=self.frame, anchor='nw')
         
         # self.canvas.bind('<Configure>', self.on_configure)
 
@@ -133,8 +122,6 @@ class Google:
           for doc in rank:
             self.ShowTitle(doc)
             aux += 1
-          
-          self.canvas.config(scrollregion=self.canvas.bbox('all'))
           self.queryButton["state"]=DISABLED
         except Exception as e :
           raise e
@@ -146,11 +133,13 @@ class Google:
         self.linkrow+=2
         
         try:
-            Linkbutton(self.canvas, text= doc["title"], command= lambda m=doc: self.OpenWindowDoc(m)).grid(row=self.linkrow,column=0)
-            Label(self.canvas, text= doc["body"]).grid(row=self.linkrow+1,column=0)
+            lb=Linkbutton(self.frame, text= doc["title"], command= lambda m=doc: self.OpenWindowDoc(m)).grid(row=self.linkrow,column=0)
+            l=Label(self.frame, text= doc["body"],wraplength=1000,background="lightblue").grid(row=self.linkrow+1,column=0)
+            
         except:
-            Linkbutton(self.canvas, text= doc["name"], command= lambda m=doc: self.OpenWindowDoc(m)).grid(row=self.linkrow,column=0)
-            Label(self.canvas,text = doc["body"],wraplength=1000,background="lightblue").grid(row=self.linkrow+1,column=0)
+            lb=Linkbutton(self.frame, text= doc["name"], command= lambda m=doc: self.OpenWindowDoc(m)).grid(row=self.linkrow,column=0)
+            l=Label(self.frame,text = doc["body"],wraplength=1000,background="lightblue").grid(row=self.linkrow+1,column=0)
+            
           
         
 
