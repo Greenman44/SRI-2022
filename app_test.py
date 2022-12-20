@@ -1,5 +1,6 @@
 from tkinter import Tk
 from frontend import Google
+from backend import run
 # from sympy import to_dnf
 # from boolean import BooleanAlgebra
 
@@ -7,9 +8,10 @@ from frontend import Google
 # alguno de los que están entre paréntesis
 
 
-# aquí escribir la query
-if __name__ == "__main__":
-    root = Tk()
-    menu = Google(root)
-    root.mainloop()
+# # aquí escribir la query
+# if __name__ == "__main__":
+#     root = Tk()
+#     menu = Google(root)
+#     root.mainloop()
+print(run('cranfield','VectorialModel','communism' ))
 

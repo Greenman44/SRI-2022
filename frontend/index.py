@@ -105,7 +105,7 @@ class Google:
         self.canvas.grid(column=0,row=10,columnspan=10)
 
         scrollbar = Scrollbar(self.window, command=self.canvas.yview)
-        scrollbar.grid(column=21,row=10)
+        scrollbar.grid(column=21,row=10,sticky='ns')
 
         self.canvas.configure(yscrollcommand = scrollbar.set)
         
