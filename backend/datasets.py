@@ -2,11 +2,14 @@ from .tools import process_datasets
 import numpy as np
 
 class Dataset:
-
+    enableData = {"cranfield","cisi"}
     def __init__(self, *names : str, freq_matrix=None, vocabulary=None):
         if len(names)>0:
             vocabulary , self.freq_matrix =  process_datasets(*names)
             self.names = list(names)
+            if names in self.enableData:
+                self.enableOp = True
+            else: self.enableOp = False
         else:
             self.freq_matrix = freq_matrix
         self.vocabulary = list(vocabulary)
@@ -70,5 +73,31 @@ class Dataset:
             except Exception as e:
                 raise e
         return result
+
+    def metrics(self, query,qry,qrel,rank,docs):
+        id = -1
+        rr = 0
+        for q in qry:
+            if query == q["query"]:
+                id = q["query number"]
+
+        if id != -1:
+            qdoc = []
+            for item in qrel:
+                if docid := item["query_num"] == id and item["id"] > 1:
+                    qdoc.append(docid)
+                   
+            for index in rank:
+                if docs[index]["id"] in qdoc :
+                    rr = rr + 1
+            prec = rr / len(rank)
+            rec = rr / len(qdoc)
+            f1 = (2*prec*rec)/ (prec + rec)
+            return prec, rec, f1
+        return -1,-1,-1
+
+
+
+
 
 

@@ -95,6 +95,12 @@ class LSIModel(Models):
         for doc in range(len(self.dataS)):
             current_sim = values[0][doc]/(np.linalg.norm(lsi_query) * np.linalg.norm(self.D[doc]))  
             sim.append(current_sim)
+        r = _Rank(sim, np.arange(len(self.dataS)))
+        p, rec = 0
+        if self.dataS.enableOp:
+            p = self.dataS.precision(r)
+            rec = self.dataS
+
         return _Rank(sim, np.arange(len(self.dataS)))
 
 

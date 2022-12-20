@@ -3,11 +3,13 @@ from .datasets import Dataset
 from os import getcwd
 import json
 
+data = None
 def run(doc_set : str, model : str, query : str):
     try :
         dataS = Dataset(doc_set)
         basePath = getcwd() + f"\\datasets\\{doc_set}_data.json"
         with open(basePath) as data_json:
+            global data
             data = list(json.load(data_json))
             data_json.close()
     except Exception as e:

@@ -2,7 +2,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
-from boolean import BooleanAlgebra
+from boolean.boolean import BooleanAlgebra 
 from sympy import sympify
 from ..datasets import Dataset
 from ..tools import filter_corpus
