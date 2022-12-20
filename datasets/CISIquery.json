@@ -1,0 +1,230 @@
+[
+    {
+        "query number": "1 ",
+        "query": "What problems and concerns are there in making up descriptive titles? What difficulties are involved in automatically retrieving articles from approximate titles? What is the usual relevance of the content of articles to their titles? "
+    },
+    {
+        "query number": "2 ",
+        "query": "How can actually pertinent data, as opposed to references or entire articles themselves, be retrieved automatically in response to information requests? "
+    },
+    {
+        "query number": "3 ",
+        "query": "What is information science? Give definitions where possible. "
+    },
+    {
+        "query number": "4 ",
+        "query": "Image recognition and any other methods of automatically transforming printed text into computer-ready form. "
+    },
+    {
+        "query number": "5 ",
+        "query": "What special training will ordinary researchers and businessmen need for proper information management and unobstructed use of information retrieval systems? What problems are they likely to encounter? "
+    },
+    {
+        "query number": "6 ",
+        "query": "What possibilities are there for verbal communication between computers and humans, that is, communication via the spoken word? "
+    },
+    {
+        "query number": "7 ",
+        "query": "Describe presently working and planned systems for publishing and printing original papers by computer, and then saving the byproduct, articles coded in data-processing form, for further use in retrieval. "
+    },
+    {
+        "query number": "8 ",
+        "query": "Describe information retrieval and indexing in other languages. What bearing does it have on the science in general? "
+    },
+    {
+        "query number": "9 ",
+        "query": "What possibilities are there for automatic grammatical and contextual analysis of articles for inclusion in an information retrieval system? "
+    },
+    {
+        "query number": "10 ",
+        "query": "The use of abstract mathematics in information retrieval, e.g. group theory. "
+    },
+    {
+        "query number": "11 ",
+        "query": "What is the need for information consolidation, evaluation, and retrieval in scientific research? "
+    },
+    {
+        "query number": "12 ",
+        "query": "Give methods for high speed publication, printing, and distribution of scientific journals. "
+    },
+    {
+        "query number": "13 ",
+        "query": "What criteria have been developed for the objective evaluation of information retrieval and dissemination systems? "
+    },
+    {
+        "query number": "14 ",
+        "query": "What future is there for automatic medical diagnosis? "
+    },
+    {
+        "query number": "15 ",
+        "query": "How much do information retrieval and dissemination systems, as well as automated libraries, cost? Are they worth it to the researcher and to industry? "
+    },
+    {
+        "query number": "16 ",
+        "query": "What systems incorporate multiprogramming or remote stations in information retrieval? What will be the extent of their use in the future? "
+    },
+    {
+        "query number": "17 ",
+        "query": "Means of obtaining large volume, high speed, customer usable information retrieval output. "
+    },
+    {
+        "query number": "18 ",
+        "query": "What methods are there for encoding, automatically matching, and automatically drawing structures extended in two dimensions, like the structural formulas for chemical compounds? "
+    },
+    {
+        "query number": "19 ",
+        "query": "Techniques of machine matching and machine searching systems. Coding and matching methods. "
+    },
+    {
+        "query number": "20 ",
+        "query": "Testing automated information systems. "
+    },
+    {
+        "query number": "21 ",
+        "query": "The need to provide personnel for the information field. "
+    },
+    {
+        "query number": "22 ",
+        "query": "Automated information in the medical field. "
+    },
+    {
+        "query number": "23 ",
+        "query": "Amount of use of books in libraries. Relation to need for automated information systems . "
+    },
+    {
+        "query number": "24 ",
+        "query": "Educational and training requirements for personnel in the information field. Possibilities for this training. Needs for programs providing this training. "
+    },
+    {
+        "query number": "25 ",
+        "query": "International systems for exchange and dissemination of information. "
+    },
+    {
+        "query number": "26 ",
+        "query": "Cost and determination of cost associated with systems of automated information. "
+    },
+    {
+        "query number": "27 ",
+        "query": "Computerized information retrieval systems. Computerized indexing systems. "
+    },
+    {
+        "query number": "28 ",
+        "query": "Computerized information systems in fields related to chemistry. "
+    },
+    {
+        "query number": "29 ",
+        "query": "Specific advantages of computerized index systems. "
+    },
+    {
+        "query number": "30 ",
+        "query": "Information dissemination by journals and periodicals. "
+    },
+    {
+        "query number": "31 ",
+        "query": "Information systems in the physical sciences. "
+    },
+    {
+        "query number": "32 ",
+        "query": "Attempts at computerized and mechanized systems for general libraries. Problems and methods of automated general author and title indexing systems. "
+    },
+    {
+        "query number": "33 ",
+        "query": "Retrieval systems which provide for the automated transmission of information to the user from a distance. "
+    },
+    {
+        "query number": "34 ",
+        "query": "Methods of coding used in computerized index systems. "
+    },
+    {
+        "query number": "35 ",
+        "query": "Government supported agencies and projects dealing with information dissemination. "
+    },
+    {
+        "query number": "36 ",
+        "query": "What are some of the theories and practices in computer translating of texts from one national language to another? How can machine translating compete with traditional methods of translating in comprehending nuances of meaning in languages of different structures? "
+    },
+    {
+        "query number": "37 ",
+        "query": "What lists of words useful for indexing or classifying material are available? Wanted are lists of terms that are descriptive vocabularies of particular fields or schedules of words that are related to each other in meaningful schemes. Wanted are lists that have been tested, at least to some extent, and found useful for organizing material and for retrieving it. "
+    },
+    {
+        "query number": "38 ",
+        "query": "How can access words in an information retrieval system be kept up to date? Word meanings and usage often change and lists must be dynamic to be current. What definitions of the problem and progress toward solutions have been made in providing necessary flexibility in systems of subject headings, index words, or other symbols used for getting at stored data? "
+    },
+    {
+        "query number": "39 ",
+        "query": "The progress of information retrieval presents problems of maladjustment and dislocation of personnel. Training and retraining of people to use the new equipment is important at all levels. Librarians, assistants, technicians, students, researchers, and even executives will need education to learn the purpose, values, and uses of information systems and hardware. What programs have been developed to change the attitudes and skills of traditional workers and help them to learn the newer techniques? "
+    },
+    {
+        "query number": "40 ",
+        "query": "What is the status of machine translation? What progress has been made in the use of computers to transfer from one language to another with some degree of automation? What problems and stumbling blocks have been found and are they considered to be insurmountable limitations or only challenging to the field of documentation on an international scale? "
+    },
+    {
+        "query number": "41 ",
+        "query": "Is alphabetical ordering of material considered to be a useful tool in information retrieval? What studies have been done to compare the effectiveness of alphabetical order with other organization schemes? Is there a generally accepted form of arranging material in alphabetical order, and is there an easy way of achieving this form without going to a great amount of effort? "
+    },
+    {
+        "query number": "42 ",
+        "query": "The average student or researcher has difficulty in comprehending the vocabulary of information retrieval. It appears important that this new field be understood before it is to be fully accepted. What basic articles would provide an understanding of the various important aspects of the information storage and retrieval? "
+    },
+    {
+        "query number": "43 ",
+        "query": "The difficulties encountered in information retrieval systems are often less related to the equipment used than to the failure to plan adequately for document analysis, indexing, and machine coding. The position of the programmer is to take a problem and write it in a way in which the equipment will understand. What articles have been written describing research in maximizing the effectiveness of programming? "
+    },
+    {
+        "query number": "44 ",
+        "query": "There are presently fifty to one hundred technical journals being published. On the average, two new journals appear every day. In the many journals published, one to two million articles appear every year. What attempts have been made to cope with this amount of scientific and technical publication in terms of analysis, control, storage, and retrieval? "
+    },
+    {
+        "query number": "45 ",
+        "query": "I am looking for information about the impact of automation on libraries and its significance for libraries in general. This includes the increasing importance of automation in view of the proliferation of information today, and how automation can help libraries cope with this problem. How will automation affect libraries and how should they react to the idea of automation? "
+    },
+    {
+        "query number": "46 ",
+        "query": "I am seeking information on the use of data processing in libraries and the mechanization of routine library processes and procedures. I would like descriptions of both general and specific applications of automation in such areas as circulation, cataloging, acquisitions, serial records, and other record-keeping. Examples should be based on the operation of a conventional public or university library, or practices in a special library which could also be applied in a public or university library. Give descriptions of equipment and operations, both present and projected. "
+    },
+    {
+        "query number": "47 ",
+        "query": "Is there any established means at present for an international exchange of material about information retrieval? If there is, does it take the form of an international agency or center which regularly distributes information retrieval methods and research results? If there is not, in what ways has this material crossed national boundaries? What seem to have been some of the problems blocking a better international exchange, and is any effort being made to solve some of those problems? "
+    },
+    {
+        "query number": "48 ",
+        "query": "Information retrieval is still such a new and experimental field that a line distinguishing research and practice is often difficult - even impossible - to draw. Are there, however, actual centers of research on information retrieval? If so, in which countries are they located? Who supports them - government, business, universities, or libraries? Can information retrieval as a specialized research discipline be said to be emerging, or is it still an amalgam of skills from other fields, such as mathematics, engineering, and library science? In other words, tell me about information retrieval research. "
+    },
+    {
+        "query number": "49 ",
+        "query": "Most resources have been spent on applying information retrieval techniques to the physical and medical sciences. But, has information retrieval been used at all in the natural sciences, social sciences, and humanities? If so, what have been some of the problems which have been encountered with these subject areas and how have they been solved, if at all? Have the characteristics of these subject areas necessitated the development of new information retrieval techniques? What are the prospcts for future machine control in these areas? "
+    },
+    {
+        "query number": "50 ",
+        "query": "Is there any use for traditional classification schemes - DDC, UDC, LC, etc. - in information retrieval systems? If there is, which scheme appears most suited to machine use and where has it been applied? If there is not, why are these classification schemes irrelevant? Has research shown that a subject classification of knowledge is completely unnecessary in machine systems? Or, have new schemes been devised which appear to be more suited to machine use? "
+    },
+    {
+        "query number": "51 ",
+        "query": "Coordinate indexing utilizes descriptors for controlled language. Of what use are descriptors in the construction of an index? How can descriptors be used for searching in an information retrieval system? "
+    },
+    {
+        "query number": "52 ",
+        "query": "What are the characteristics of MEDLARS (Medical Literature Analysis and Retrieval System) project which has been undertaken by the National Library of Medicine? How does it index current medical journals and of what relation is this indexing system to Index Medicus? What are the major components of the MEDLARS project and its major operating details? "
+    },
+    {
+        "query number": "53 ",
+        "query": "How can the computer be used in medical science for diagnostic and clinical record keeping purposes? Have any programs of automation been tried in hospitals? If so, what have been the results? What problems have been encountered in the use of automation in medicine? For what purposes can an automated system of clinical records be used? What are other possible uses of the computer in medicine? "
+    },
+    {
+        "query number": "54 ",
+        "query": "What is the effect on librarians of automation? Note the new types of technology to be used in the library which will have an effect on the status, position, and function of the librarians. What changes are being contemplated or have been initiated to introduce automation into the education of librarians? "
+    },
+    {
+        "query number": "55 ",
+        "query": "What are the aims and objectives of the medical literature analysis and retrieval system (MEDLARS)? How does MEDLARS operate? What are the possible applications of MEDLARS to future information retrieval systems? "
+    },
+    {
+        "query number": "56 ",
+        "query": "The standard method of finding information in today's libraries is through the use of the alphabetically arranged card catalog or the classified catalog based on a classification system such as the DC or LC. Can these systems be modified for use with automated information retrieval? "
+    },
+    {
+        "query number": "57 ",
+        "query": "In catalogs which are either arranged alphabetically or arranged by classification number, the LC entry, printed in readable language, is ultimately important because the individual looking for information has a definite author, title, or subject phrase in his language (probably English in our case) in mind. Will LC entries and subject headings be used in the same manner in automated systems? "
+    }
+]
