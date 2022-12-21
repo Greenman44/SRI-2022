@@ -17,6 +17,30 @@ class Models:
     def _weightUp_terms(self):
         pass
 
+    def metrics(self, query, rank):
+        id = -1
+        rr = 0
+        for q in self.dataS.querys_data:
+            if query == q["query"]:
+                id = q["query number"]
+                break
+
+        if id != -1:
+            qdoc = []
+            for item in self.dataS.rel_data:
+                if int(item["query_num"]) == id and item["position"] > 1:
+                    qdoc.append(item["id"])
+                if int(item["query_num"]) > id: break
+                   
+            for index in rank:
+                if str(self.dataS.data[index]["id"]) in qdoc :
+                    rr = rr + 1
+            prec = rr / len(rank)
+            rec = rr / len(qdoc)
+            f1 = (2*prec*rec)/ (prec + rec)
+            return prec, rec, f1
+        return -1,-1,-1
+
 class BooleanModel(Models):
     def __init__(self, dataS: Dataset):
         super().__init__(dataS)
@@ -28,7 +52,7 @@ class BooleanModel(Models):
         for doc in range(len(self.dataS)):
             bool_doc = {}
             for word in query_vocabulary:
-                if self.dataS[doc, word] > 0:
+                if self.dataS[word,doc] > 0:
                     bool_doc.update({word : true})
                 else:
                     bool_doc.update({word : false})
@@ -50,30 +74,28 @@ class VectorialModel(Models):
         vocDataQuery = dataSQuery.vocabulary
         sim = []
         query_weights = processor.weightUp_query(
-            dataSQuery, self.idfs , self.dataS.vocabulary
+            dataSQuery, self.dataS.vocabulary
         )
-        for doc in range(len(self.dataS_weight)):
+        for doc in range(len(self.dataS)):
             sim.append(doc)
             simNormD = []
             simNormQ = []
             for word in vocDataQuery:
                 try:
-                    sim[doc] += self.dataS_weight[doc, word] * query_weights[0, word]
-                    simNormD.append(self.dataS_weight[doc, word])
-                    simNormQ.append(dataSQuery[0, word])
+                    weight_term = self.dataS[word, doc] * self.dataS.vocabulary[word][1]
+                    sim[doc] += weight_term * query_weights[word,0]
+                    simNormD.append(weight_term)
+                    simNormQ.append(query_weights[word, 0])
                 except:
                     continue
+
             normQueryVector = np.linalg.norm(simNormQ)
             normDocVector = np.linalg.norm(simNormD)
             sim[doc] = sim[doc] / normQueryVector * normDocVector
-            doclist = [i for i in range(len(self.dataS_weight))]
-        return _Rank(sim, doclist)
+        doclist = [i for i in range(len(self.dataS))]
+        rank = _Rank(sim, doclist)
+        return rank, self.metrics(query, rank) if self.dataS.enableOp else rank
 
-    def _weightUp_terms(self):
-        tfidf_Transformer = TfidfTransformer(smooth_idf=False)
-        weight = tfidf_Transformer.fit_transform(self.dataS.freq_matrix)
-        self.idfs =  tfidf_Transformer.idf_
-        self.dataS_weight = Dataset(freq_matrix=weight, vocabulary=self.dataS.vocabulary)
         
 
 
@@ -86,8 +108,7 @@ class LSIModel(Models):
         processor = LSIQueryProcessor(query)
         query_set = processor.processQuery()
         query_set = self._growQuerySet(query_set)
-        query_trasp = np.transpose(query_set.freq_matrix)
-        lsi_query = np.dot(np.dot(self.S, self.T),query_trasp)
+        lsi_query = np.dot(np.dot(self.S, self.T),query_set.freq_matrix)
         lsi_query = np.transpose(lsi_query)
         values = np.dot(lsi_query, self.D)
         self.D = np.transpose(self.D)
@@ -101,47 +122,46 @@ class LSIModel(Models):
             p = self.dataS.precision(r)
             rec = self.dataS
 
-        return _Rank(sim, np.arange(len(self.dataS)))
+        rank = _Rank(sim, np.arange(len(self.dataS)))
+        return rank, self.metrics(query, rank) if self.dataS.enableOp else rank
 
 
     def _weightUp_terms(self):
         global_weight = self._computeGlobalWeight() 
         for doc in range(len(self.dataS)):
             for word in self.dataS.vocabulary:
-                self.dataS[doc, word] = log2(self.dataS[doc, word] + 1) * global_weight[word]
+                self.dataS[word, doc] = log2(self.dataS[word, doc] + 1) * global_weight[word]
         
-        self.T , self.S, self.D = np.linalg.svd(np.transpose(self.dataS.freq_matrix.toarray()), full_matrices= False)
+        self.T , self.S, self.D = np.linalg.svd(np.transpose(self.dataS.freq_matrix), full_matrices= False)
         self.S = np.diag(self.S)
         self.T = self.T[:, : np.shape(self.T)[1] - 2]
         self.S = self.S[: np.shape(self.S)[0] - 2, : np.shape(self.S)[1] - 2]
         self.D = self.D[: np.shape(self.D)[0] - 2, : ]
-        self.T = np.transpose(self.T)
         self.S = np.linalg.inv(self.S)
 
     def _computeGlobalWeight(self):
         global_weight = {}
         g_i = 1
         for word in self.dataS.vocabulary:  
-            p_ij = 1/self.dataS.getAllOcurrences(word)
+            p_ij = 1/self.dataS.vocabulary[word][2]
             for doc in range(len(self.dataS)):
-                p_ij *= self.dataS[doc,word]
+                p_ij *= self.dataS[word,doc]
                 g_i += (p_ij + log2(p_ij+1))/log2(len(self.dataS))
             global_weight.update({word : g_i})
         return global_weight
         
     def _growQuerySet(self, query_set : Dataset):
-        matrix = np.zeros((1,len(self.dataS.vocabulary)))
+        matrix = np.zeros((len(self.dataS.vocabulary.keys())), 1)
         newSet = Dataset(freq_matrix=matrix, vocabulary=self.dataS.vocabulary)
         for word in query_set.vocabulary:
             try:
-                newSet[0,word] = query_set[0,word]
+                newSet[word, 0] = query_set[word, 0]
             except Exception as e:
                 print(str(e))
                 continue
         return newSet
 
 def _Rank(sim: list[float], doc):
-    print(sim)
     print("**********************************************")
     for i in range(len(sim)):
         for j in range(i + 1, len(sim)):
@@ -149,4 +169,4 @@ def _Rank(sim: list[float], doc):
                 sim[i], sim[j] = sim[j], sim[i]
                 doc[i], doc[j] = doc[j], doc[i]
 
-    return doc
+    return doc[0:50] if len(doc) > 50 else doc

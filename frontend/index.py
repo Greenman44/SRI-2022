@@ -101,23 +101,27 @@ class Google:
         self.canvas.configure(scrollregion=self.canvas.bbox('all'))
 
     def Begin(self):
-        self.canvas = Canvas(self.window,height=500,width=1000,background="white")
+        self.canvas = Canvas(self.window,height=500,width=1000)
         self.canvas.grid(column=0,row=10,columnspan=10)
 
-        scrollbar = Scrollbar(self.window, command=self.canvas.yview)
-        scrollbar.grid(column=21,row=10,sticky='ns')
+        self.scrollbar = Scrollbar(self.window, command=self.canvas.yview)
+        self.scrollbar.grid(column=21,row=10,sticky='ns')
 
-        self.canvas.configure(yscrollcommand = scrollbar.set)
+        self.canvas.configure(yscrollcommand = self.scrollbar.set)
         
         self.canvas.bind('<Configure>', self.on_configure)
 
         self.frame= Frame(self.canvas)
         self.canvas.create_window((0,10),window=self.frame, anchor='nw')
+
+        self.preclb=Label(self.window,self.window,
+            font=("Times New Roman", 10),
+            background="white").grid(column=4, row=5)
         
         # self.canvas.bind('<Configure>', self.on_configure)
 
         try :
-          rank = run(self.selecteddocument.get(), self.selectedModel.get(), self.NumSerie.get())
+          rank, metrics = run(self.selecteddocument.get(), self.selectedModel.get(), self.NumSerie.get())
           aux = 0
           for doc in rank:
             self.ShowTitle(doc)
@@ -137,7 +141,7 @@ class Google:
             l=Label(self.frame, text= doc["body"],wraplength=1000,background="lightblue").grid(row=self.linkrow+1,column=0)
             
         except:
-            lb=Linkbutton(self.frame, text= doc["name"], command= lambda m=doc: self.OpenWindowDoc(m)).grid(row=self.linkrow,column=0)
+            lb=Linkbutton(self.frame, text = doc["name"], command= lambda m=doc: self.OpenWindowDoc(m)).grid(row=self.linkrow,column=0)
             l=Label(self.frame,text = doc["body"],wraplength=1000,background="lightblue").grid(row=self.linkrow+1,column=0)
             
           
@@ -160,7 +164,9 @@ class Google:
         newwindow.mainloop()
 
     def CloseFrame(self):
-        self.lf.destroy()
+        self.frame.destroy()
+        self.canvas.destroy()
+        self.scrollbar.destroy()
         self.queryButton['state'] = NORMAL
 
     def MessageForModel(self, event):

@@ -5,7 +5,7 @@ from nltk.stem import PorterStemmer
 from boolean.boolean import BooleanAlgebra 
 from sympy import sympify
 from ..datasets import Dataset
-from ..tools import filter_corpus
+from ..tools import filter_corpus, buildFreqMatrix
 
 class QueryProcessor:
     def __init__(self, query : str):
@@ -24,23 +24,20 @@ class VectorialQueryProcessor(QueryProcessor):
     
     def processQuery(self):
         query = filter_corpus(self.query)
-        cv = CountVectorizer()
-        matrixFreqs = cv.fit_transform([query])
-        vocabulary = cv.get_feature_names_out()
+    
+        vocabulary, matrixFreqs = buildFreqMatrix([query])
 
         return Dataset(freq_matrix=matrixFreqs, vocabulary=vocabulary)
     
-    def weightUp_query(self, queryDataset : Dataset, docs_idf, docs_vocabulary : list[str]):
+    def weightUp_query(self, queryDataset : Dataset, docs_vocabulary : list[tuple]):
         a = 0.4
-        tf_transformer = TfidfTransformer(use_idf=False)
-        queryDataset.freq_matrix = tf_transformer.fit_transform(queryDataset.freq_matrix)
 
         for word in queryDataset.vocabulary:
             try :
-                currentIdf = docs_idf[docs_vocabulary.index(word)]
-            except :
+                currentIdf = docs_vocabulary[word][1]
+            except KeyError:
                 currentIdf = 0
-            queryDataset[0 , word] = (a + (1.0 - a) * queryDataset[0, word]) * currentIdf
+            queryDataset[word, 0] = (a + (1.0 - a) * queryDataset[word,0]) * currentIdf
 
         return queryDataset  
 
@@ -65,9 +62,7 @@ class LSIQueryProcessor(QueryProcessor):
     
     def processQuery(self):
         query = filter_corpus(self.query)
-        cv = CountVectorizer()
-        matrixFreqs = cv.fit_transform([query])
-        vocabulary = cv.get_feature_names_out()
+        vocabulary, matrixFreqs = buildFreqMatrix([query])
         return Dataset(freq_matrix=matrixFreqs, vocabulary=vocabulary)
 
        

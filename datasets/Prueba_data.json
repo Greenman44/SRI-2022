@@ -1,32 +1,56 @@
 [
     {
-        "name": "51121",
-        "path": "D:\\Cibern\u00e9tica\\!!!!Tercer a\u00f1o\\SRI\\20news-bydate-train\\alt.atheism\\51121",
-        "body": "From: strom@Watson.Ibm.Com (Rob Strom)Subject: Re: [soc.motss, et al.] \"Princeton axes matching funds for Boy Scouts\"Distribution: usaOrganization: IBM ResearchLines: 15In article <N4HY.93Apr5120934@harder.ccr-p.ida.org>, n4hy@harder.ccr-p.ida.org (Bob McGwier) writes:|> [1] HOWEVER, I hate economic terrorism and political correctness|> worse than I hate this policy.  |> [2] A more effective approach is to stop donating|> to ANY organizating that directly or indirectly supports gay rights issues|> until they end the boycott on funding of scouts.  Can somebody reconcile the apparent contradiction between [1] and [2]?-- Rob Strom, strom@watson.ibm.com, (914) 784-7641IBM Research, 30 Saw Mill River Road, P.O. Box 704, Yorktown Heights, NY  10598"
+
+        "id" : 1,
+        "author" : "brenckman,m.",
+        "bibliography" : "j. ae. scs. 25, 1958, 324.",
+        "body" : "experimental investigation of the aerodynamics of a wing in a slipstream .   an experimental study of a wing in a propeller slipstream was made in order to determine the spanwise distribution of the lift increase due to slipstream at different angles of attack of the wing and at different free stream to slipstream velocity ratios .  the results were intended in part as an evaluation basis for different theoretical treatments of this problem .   the comparative span loading curves, together with supporting evidence, showed that a substantial part of the lift increment produced by the slipstream was due to a /destalling/ or boundary-layer-control effect .  the integrated remaining lift increment, after subtracting this destalling lift, was found to agree well with a potential flow theory .   an empirical evaluation of the destalling effects was made for the specific configuration of the experiment .",
+        "title" : "experimental investigation of the aerodynamics of a wing in a slipstream ."
+  
     },
     {
-        "name": "51123",
-        "path": "D:\\Cibern\u00e9tica\\!!!!Tercer a\u00f1o\\SRI\\20news-bydate-train\\alt.atheism\\51123",
-        "body": "From: keith@cco.caltech.edu (Keith Allan Schneider)Subject: Re: Political Atheists?Organization: California Institute of Technology, PasadenaLines: 11NNTP-Posting-Host: punisher.caltech.eduarromdee@jyusenkyou.cs.jhu.edu (Ken Arromdee) writes:>>The motto originated in the Star-Spangled Banner.  Tell me that this has>>something to do with atheists.>The motto _on_coins_ originated as a McCarthyite smear which equated atheism>with Communism and called both unamerican.No it didn't.  The motto has been on various coins since the Civil War.It was just required to be on *all* currency in the 50's.keith"
+  
+        "id" : 2,
+        "author" : "ting-yili",
+        "bibliography" : "department of aeronautical engineering, rensselaer polytechnic institute troy, n.y.",
+        "body" : "simple shear flow past a flat plate in an incompressible fluid of small viscosity . in the study of high-speed viscous flow past a two-dimensional body it is usually necessary to consider a curved shock wave emitting from the nose or leading edge of the body .  consequently, there exists an inviscid rotational flow region between the shock wave and the boundary layer .  such a situation arises, for instance, in the study of the hypersonic viscous flow past a flat plate .  the situation is somewhat different from prandtl's classical boundary-layer problem . in prandtl's original problem the inviscid free stream outside the boundary layer is irrotational while in a hypersonic boundary-layer problem the inviscid free stream must be considered as rotational .  the possible effects of vorticity have been recently discussed by ferri and libby .  in the present paper, the simple shear flow past a flat plate in a fluid of small viscosity is investigated .  it can be shown that this problem can again be treated by the boundary-layer approximation, the only novel feature being that the free stream has a constant vorticity .  the discussion here is restricted to two-dimensional incompressible steady flow .",
+        "title" : "simple shear flow past a flat plate in an incompressible fluid of small viscosity ."
+  
     },
     {
-        "name": "51126",
-        "path": "D:\\Cibern\u00e9tica\\!!!!Tercer a\u00f1o\\SRI\\20news-bydate-train\\alt.atheism\\51126",
-        "body": "From: keith@cco.caltech.edu (Keith Allan Schneider)Subject: Re: >>>>>>Pompous assOrganization: California Institute of Technology, PasadenaLines: 9NNTP-Posting-Host: punisher.caltech.edukmr4@po.CWRU.edu (Keith M. Ryan) writes:>>Then why do people keep asking the same questions over and over?>Because you rarely ever answer them.Nope, I've answered each question posed, and most were answered multipletimes.keith"
+  
+        "id" : 3,
+        "author" : "m. b. glauert",
+        "bibliography" : "department of mathematics, university of manchester, manchester, england",
+        "body" : "the boundary layer in simple shear flow past a flat plate . the boundary-layer equations are presented for steady incompressible flow with no pressure gradient .",
+        "title" : "the boundary layer in simple shear flow past a flat plate ."
+  
     },
     {
-        "name": "51125",
-        "path": "D:\\Cibern\u00e9tica\\!!!!Tercer a\u00f1o\\SRI\\20news-bydate-train\\alt.atheism\\51125",
-        "body": "From: keith@cco.caltech.edu (Keith Allan Schneider)Subject: Re: <Political Atheists?Organization: California Institute of Technology, PasadenaLines: 54NNTP-Posting-Host: punisher.caltech.edu(reference line trimmed)livesey@solntze.wpd.sgi.com (Jon Livesey) writes:[...]>There is a good deal more confusion here.   You started off with the >assertion that there was some \"objective\" morality, and as you admit>here, you finished up with a recursive definition.   Murder is >\"objectively\" immoral, but eactly what is murder and what is not itself>requires an appeal to morality.Yes.>Now you have switch targets a little, but only a little.   Now you are>asking what is the \"goal\"?   What do you mean by \"goal?\".   Are you>suggesting that there is some \"objective\" \"goal\" out there somewhere,>and we form our morals to achieve it?Well, for example, the goal of \"natural\" morality is the survival andpropogation of the species.  Another example of a moral system ispresented within the Declaration of Independence, which states that weshould be guaranteed life liberty and the pursuit of happiness.  You see,to have a moral system, we must define the purpose of the system.  That is,we shall be moral unto what end?>>Murder is certainly a violation of the golden rule.  And, I thought I had>>defined murder as an intentional killing of a non-murderer, against his will.>>And you responded to this by asking whether or not the execution of an>>innocent person under our system of capital punishment was a murder or not.>>I fail to see what this has to do with anything.  I never claimed that our>>system of morality was an objective one.>I thought that was your very first claim.   That there was>some kind of \"objective\" morality, and that an example of that was>that murder is wrong.   If you don't want to claim that any more,>that's fine.Well, murder violates the golen rule, which is certainly a pillar of mostevery moral system.  However, I am not assuming that our current systemand the manner of its implementation are objectively moral.  I think thatit is a very good approximation, but we can't be perfect.>And by the way, you don't seem to understand the difference between>\"arbitrary\" and \"objective\".   If Keith Schneider \"defines\" murder>to be this that and the other, that's arbitrary.   Jon Livesey may>still say \"Well, according to my personal system of morality, all>killing of humans against their will is murder, and wrong, and what>the legal definition of murder may be in the USA, Kuweit, Saudi>Arabia, or the PRC may be matters not a whit to me\".Well, \"objective\" would assume a system based on clear and fundamentalconcepts, while \"arbitary\" implies no clear line of reasoning.keith"
+  
+        "id" : 4,
+        "author" : "yen,k.t.",
+        "bibliography" : "j. ae. scs. 22, 1955, 728.",
+        "body" : "approximate solutions of the incompressible laminar boundary layer equations for a plate in shear flow .   the two-dimensional steady boundary-layer problem for a flat plate in a shear flow of incompressible fluid is considered . solutions for the boundary- layer thickness, skin friction, and the velocity distribution in the boundary layer are obtained by the karman-pohlhausen technique .  comparison with the boundary layer of a uniform flow has also been made to show the effect of vorticity .",
+        "title" : "approximate solutions of the incompressible laminar boundary layer equations for a plate in shear flow ."
+  
     },
     {
-        "name": "51126",
-        "path": "D:\\Cibern\u00e9tica\\!!!!Tercer a\u00f1o\\SRI\\20news-bydate-train\\alt.atheism\\51126",
-        "body": "From: keith@cco.caltech.edu (Keith Allan Schneider)Subject: Re: >>>>>>Pompous assOrganization: California Institute of Technology, PasadenaLines: 9NNTP-Posting-Host: punisher.caltech.edukmr4@po.CWRU.edu (Keith M. Ryan) writes:>>Then why do people keep asking the same questions over and over?>Because you rarely ever answer them.Nope, I've answered each question posed, and most were answered multipletimes.keith"
+  
+        "id" : 5,
+        "author" : "wasserman,b.",
+        "bibliography" : "j. ae. scs. 24, 1957, 924.",
+        "body" : "one-dimensional transient heat conduction into a double-layer slab subjected to a linear heat input for a small time internal .   analytic solutions are presented for the transient heat conduction in composite slabs exposed at one surface to a triangular heat rate .  this type of heating rate may occur, for example, during aerodynamic heating .",
+        "title" : "one-dimensional transient heat conduction into a double-layer slab subjected to a linear heat input for a small time internal ."
+  
     },
     {
-        "name": "51127",
-        "path": "D:\\Cibern\u00e9tica\\!!!!Tercer a\u00f1o\\SRI\\20news-bydate-train\\alt.atheism\\51127",
-        "body": "From: keith@cco.caltech.edu (Keith Allan Schneider)Subject: Re: >>>>>>Pompous assOrganization: California Institute of Technology, PasadenaLines: 14NNTP-Posting-Host: punisher.caltech.edulivesey@solntze.wpd.sgi.com (Jon Livesey) writes:>>>How long does it [the motto] have to stay around before it becomes the>>>default?  ...  Where's the cutoff point? >>I don't know where the exact cutoff is, but it is at least after a few>>years, and surely after 40 years.>Why does the notion of default not take into account changes>in population makeup?     Specifically, which changes are you talking about?  Are you arguingthat the motto is interpreted as offensive by a larger portion of thepopulation now than 40 years ago?keith"
+  
+        "id" : 6,
+        "author" : "campbell,w.f.",
+        "bibliography" : "j. ae. scs. 25, 1958, 340.",
+        "body" : "one-dimensional transient heat flow in a multilayer slab .   in a recent contribution to the readers' forum wassermann gave analytic solutions for the temperature in a double layer slab, with a triangular heat rate input at one face, insulated at the other, and with no thermal resistance at the interface .  his solutions were for the three particular cases.. i propose here to give the general solution to this problem, to indicate briefly how it is obtained using the method of reference 2, and to point out that the solutions given by wassermann are incomplete for times longer than the duration of the heat input .",
+        "title" : "one-dimensional transient heat flow in a multilayer slab ."
+  
     }
 ]

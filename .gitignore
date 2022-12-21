@@ -161,3 +161,5 @@ cython_debug/
 
 settings.json
 api_jj.session.sql
+
+datasets/
