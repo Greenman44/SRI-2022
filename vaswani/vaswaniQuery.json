@@ -1,0 +1,374 @@
+[
+    {
+        "query number": "1",
+        "query": " MEASUREMENT OF DIELECTRIC CONSTANT OF LIQUIDS BY THE USE OF MICROWAVE TECHNIQUES /"
+    },
+    {
+        "query number": "2",
+        "query": " MATHEMATICAL ANALYSIS AND DESIGN DETAILS OF WAVEGUIDE FED MICROWAVE RADIATIONS /"
+    },
+    {
+        "query number": "3",
+        "query": " USE OF DIGITAL COMPUTERS IN THE DESIGN OF BAND PASS FILTERS HAVING GIVEN PHASE AND ATTENUATION CHARACTERISTICS /"
+    },
+    {
+        "query number": "4",
+        "query": " SYSTEMS OF DATA CODING FOR INFORMATION TRANSFER /"
+    },
+    {
+        "query number": "5",
+        "query": " USE OF PROGRAMS IN ENGINEERING TESTING OF COMPUTERS /"
+    },
+    {
+        "query number": "6",
+        "query": " NUMBER REPRESENTATION IN BINARY MACHINES /"
+    },
+    {
+        "query number": "7",
+        "query": " SECONDARY EMISSION OF ELECTRONS BY POSITIVE ION BOMBARDMENT OF THE CATHODE /"
+    },
+    {
+        "query number": "8",
+        "query": " MEASUREMENT OF PLASMA TEMPERATURES IN ARC DISCHARGE USING SHOCK WAVE TECHNIQUES /"
+    },
+    {
+        "query number": "9",
+        "query": " CHARACTERISTICS OF THE SINGLE ELECTRODE DISCHARGE IN THE RARE GASES AT LOW PRESSURES /"
+    },
+    {
+        "query number": "10",
+        "query": " METHODS OF CALCULATING INSTANTANEOUS POWER DISSIPATION IN REACTIVE CIRCUITS /"
+    },
+    {
+        "query number": "11",
+        "query": " THE EFFECT OF OXIDATION ON CIRCUIT BREAKER CONTACTS /"
+    },
+    {
+        "query number": "12",
+        "query": " TEMPERATURE INDEPENDENT METHODS FOR TUNING HIGHLY STABLE HIGH FREQUENCY OSCILLATORS /"
+    },
+    {
+        "query number": "13",
+        "query": " MATHEMATICAL EXPRESSIONS AND GRAPHS FOR THE DESIGN OF TRANSISTORISED TUNED PASS BAND AMPLIFIERS /"
+    },
+    {
+        "query number": "14",
+        "query": " SYNTHESIS OF FILTERS HAVING HIGH ATTENUATION CHARACTERISTICS USING A BLOCK DIAGRAM APPROACH /"
+    },
+    {
+        "query number": "15",
+        "query": " VOLTAGE CURRENT RELATIONSHIPS IN NETWORKS OF NONLINEAR ELEMENTS CONNECTED IN PARALLEL /"
+    },
+    {
+        "query number": "16",
+        "query": " METHODS OF APPROXIMATING THE FREQUENCY PHASE RELATIONSHIPS FOR RESISTIVE INDUCTIVE AND RESISTIVE CAPACITIVE CIRCUITS /"
+    },
+    {
+        "query number": "17",
+        "query": " OBSERVATIONS OF RAPID FLUCTUATIONS IN THE EARTHS MAGNETIC FIELD AND THEIR RELATION TO THE PROPAGATION OF HYDROMAGNETIC WAVES IN THE EXOSPHERE /"
+    },
+    {
+        "query number": "18",
+        "query": " DIURNAL VARIATIONS OF FLUCTUATIONS IN THE EARTHS MAGNETIC FIELD /"
+    },
+    {
+        "query number": "19",
+        "query": " SPHERICAL HARMONIC ANALYSIS OF THE EARTHS MAGNETIC FIELD /"
+    },
+    {
+        "query number": "20",
+        "query": " DERIVATION OF THE COMPONENTS OF THE ELECTRICAL CONDUCTIVITY IN THE UPPER ATMOSPHERE /"
+    },
+    {
+        "query number": "21",
+        "query": " THE EFFECTS OF SOLAR FLARES ON THE ABSORPTION OF COSMIC RADIO NOISE IN THE IONOSPHERE /"
+    },
+    {
+        "query number": "22",
+        "query": " DETERMINATION OF THE CURRENT SYSTEMS IN THE UPPER ATMOSPHERE DURING MAGNETIC STORMS /"
+    },
+    {
+        "query number": "23",
+        "query": " OBSERVATIONS OF THE SUN DURING ECLIPSES GIVING THE DISTRIBUTION OF SOURCES ON THE DISC IN THE MICROWAVE RANGE /"
+    },
+    {
+        "query number": "24",
+        "query": " OBSERVATIONS OF THE SUN USING RADIO INTERFEROMETERS /"
+    },
+    {
+        "query number": "25",
+        "query": " EQUATIONS GOVERNING THE PROPAGATION OF ELECTROMAGNETIC AND HYDROMAGNETIC WAVES IN THE SOLAR CORONA /"
+    },
+    {
+        "query number": "26",
+        "query": " ESTIMATES OF THE DENSITY OF IONIZATION AND TEMPERATURE IN THE SOLAR CORONA /"
+    },
+    {
+        "query number": "27",
+        "query": " PLEASE SEND ABSTRACTS ON THE SOURCE SPECTRA OF LIGHTNING DISCHARGES /"
+    },
+    {
+        "query number": "28",
+        "query": " THE EFFECT OF SMALL DISTORTIONS IN THE SURFACE OF A CAVITY RESONATOR /"
+    },
+    {
+        "query number": "29",
+        "query": " THE DETERMINATION OF THE ORBITS OF INDIVIDUAL METEORS BY RADIO METHODS /"
+    },
+    {
+        "query number": "30",
+        "query": " THE DETERMINATION OF ION MASSES IN THE IONOSPHERE BY THE STUDY OF BACK SCATTERED RADIO WAVES /"
+    },
+    {
+        "query number": "31",
+        "query": " THEORETICAL STUDIES OF THE SOURCE OF HIGH FREQUENCY RADIO WAVES EMITTED FROM THE PLANET JUPITER /"
+    },
+    {
+        "query number": "32",
+        "query": " SIMULTANEOUS OBSERVATIONS OF WHISTLERS AND LIGHTNING DISCHARGES /"
+    },
+    {
+        "query number": "33",
+        "query": " VARIATIONS IN THE HEIGHT OF REFLECTION OF LOW OR VERY LOW FREQUENCY RADIO WAVES IN THE PERIOD BEFORE GROUND SUNRISE /"
+    },
+    {
+        "query number": "34",
+        "query": " THE USE OF IONOSPHERIC CROSS MODULATION IN THE DETERMINATION OF IONOSPHERIC ELECTRON DENSITIES AND COLLISION FREQUENCIES /"
+    },
+    {
+        "query number": "35",
+        "query": " MEASUREMENTS OF IONOSPHERIC DRIFTS NEAR THE EQUATOR /"
+    },
+    {
+        "query number": "36",
+        "query": " THE USE OF ANALOGUE COMPUTERS IN UPPER ATMOSPHERE THEORY /"
+    },
+    {
+        "query number": "37",
+        "query": " THE USE OF LUNAR RADIO REFLECTIONS IN INVESTIGATIONS OF THE NATURE OF THE MOONS SURFACE /"
+    },
+    {
+        "query number": "38",
+        "query": " WHAT REFERENCES ON COMPARISON BETWEEN GROUND LEVEL AND HIGH ALTITUDE BALLOON COSMIC RAY RESULTS /"
+    },
+    {
+        "query number": "39",
+        "query": " WHAT REFERENCES ON MODEL EXPERIMENTS IN AURORA /"
+    },
+    {
+        "query number": "40",
+        "query": " WHAT REFERENCES ON INTEGRAL SPECTRUM OF PRIMARY COSMIC RAYS /"
+    },
+    {
+        "query number": "41",
+        "query": " FERROMAGNETIC TECHNIQUES FOR COMPUTER STORES /"
+    },
+    {
+        "query number": "42",
+        "query": " SOLUTION OF DIFFERENTIAL EQUATIONS BY COMPUTER /"
+    },
+    {
+        "query number": "43",
+        "query": " EFFICIENCY OF DIGITAL COMPUTERS VERSUS ANALOGUE COMPUTERS IN THE SOLUTION OF BOUNDARY VALUE PROBLEMS /"
+    },
+    {
+        "query number": "44",
+        "query": " METHODS OF ERROR CHECKING IN DIGITAL COMPUTERS /"
+    },
+    {
+        "query number": "45",
+        "query": " METHODS OF PRODUCING MINIMAL NETS GIVEN A LOGICAL FUNCTION IN CANONICAL FORM /"
+    },
+    {
+        "query number": "46",
+        "query": " ARITHMETIC UNITS AS REQUIRED IN A DIGITAL COMPUTER INCLUDING SHIFT REGISTERS SERIAL AND PARALLEL ADDER /"
+    },
+    {
+        "query number": "47",
+        "query": " INFORMATION ON THE DESIGN OF LOW DRIFT TRANSISTOR AMPLIFIERS /"
+    },
+    {
+        "query number": "48",
+        "query": " INFORMATION ON HIGH CURRENT TRANSISTOR SWITCHES /"
+    },
+    {
+        "query number": "49",
+        "query": " INFORMATION ON DESIGN OF TIME DIVISION MULTIPLEXING CIRCUITS /"
+    },
+    {
+        "query number": "50",
+        "query": " DETAILS OF AVAILABLE LOW VOLTAGE CAPACITORS /"
+    },
+    {
+        "query number": "51",
+        "query": " DESIGN OF DIRECT COUPLED FLIP FLOPS TO FUNCTION WITH THE MAXIMUM VARIATIONS IN THE VALUES OF THE CIRCUIT COMPONENTS /"
+    },
+    {
+        "query number": "52",
+        "query": " PLEASE SUPPLY INFORMATION ON THE PERFORMANCE OF TYPICAL MAGNETIC FILM MEMORY SYSTEMS WITH CIRCUIT DIAGRAMS /"
+    },
+    {
+        "query number": "53",
+        "query": " I WOULD LIKE DETAILS OF THE WORK WHICH HAS BEEN DONE TO EXTEND THE FREQUENCY RANGE OF MAGNETIC AMPLIFIERS /"
+    },
+    {
+        "query number": "54",
+        "query": " I WOULD LIKE INFORMATION ON THE RANGE OF STATIC RELAYS SUITABLE FOR USE AT HIGH SWITCHING RATES /"
+    },
+    {
+        "query number": "55",
+        "query": " I AM INTERESTED IN CIRCUITRY CAPABLE OF GENERATING EXTREMELY NARROW PULSES /"
+    },
+    {
+        "query number": "56",
+        "query": " PLEASE SUPPLY INFORMATION ON THE THEORY AND USE OF PARAMETRIC AMPLIFIERS /"
+    },
+    {
+        "query number": "57",
+        "query": " THE SYNTHESIS OF NETWORKS WITH GIVEN SAMPLED DATA TRANSFER FUNCTIONS /"
+    },
+    {
+        "query number": "58",
+        "query": " THE THEORY OF STABILITY IN RELATION TO CONTROL SYSTEMS WITH RELAY ELEMENTS /"
+    },
+    {
+        "query number": "59",
+        "query": " THE USE OF DIGITAL COMPUTERS TO OBTAIN POWER SPECTRAL ANALYSIS OF NUMERICAL DATA /"
+    },
+    {
+        "query number": "60",
+        "query": " PRINTED CIRCUIT DESIGN FOR A RANDOM PULSE GENERATOR OF LOW FREQUENCY /"
+    },
+    {
+        "query number": "61",
+        "query": " REFERENCES ON ELECTRIC FIELD THEORIES OF THE AURORA /"
+    },
+    {
+        "query number": "62",
+        "query": " FAST TRANSISTOR COUNTERS /"
+    },
+    {
+        "query number": "63",
+        "query": " LOW PASS LATTICE FILTERS /"
+    },
+    {
+        "query number": "64",
+        "query": " SIMILARITIES BETWEEN THE DIFFRACTION THEORY OF ELECTROMAGNETIC WAVES AND THAT OF ELECTRON STREAMS /"
+    },
+    {
+        "query number": "65",
+        "query": " THE USE OF COMPLEX VARIABLES IN THE THEORY OF COMMUNICATION NETWORKS /"
+    },
+    {
+        "query number": "66",
+        "query": " THE BEHAVIOUR OF A BEAM OF CHARGED PARTICLES IN THE PRESENCE OF PLANE CONDUCTORS /"
+    },
+    {
+        "query number": "67",
+        "query": " PREDICTING THE PATHS OF ELECTRONS MOVING IN A VARYING MAGNETIC FIELD /"
+    },
+    {
+        "query number": "68",
+        "query": " ACTIVE CONSTANT VOLTAGE TRANSFORMER FOR SIGNAL DISTRIBUTION /"
+    },
+    {
+        "query number": "69",
+        "query": " ACTIVE AUDIO FREQUENCY FILTER WITH VARIABLE CUT OFF SLOPE /"
+    },
+    {
+        "query number": "70",
+        "query": " VARIABLE ULTRA HIGH FREQUENCY ATTENUATORS /"
+    },
+    {
+        "query number": "71",
+        "query": " FAULTY OPERATION OF FEEDBACK TIME BASES /"
+    },
+    {
+        "query number": "72",
+        "query": " VARIABLE CAPACITANCE AMPLIFIERS /"
+    },
+    {
+        "query number": "73",
+        "query": " TRANSISTOR SWEEP GENERATORS /"
+    },
+    {
+        "query number": "74",
+        "query": " ADVANTAGES OF PARAMETRIC AMPLIFIERS /"
+    },
+    {
+        "query number": "75",
+        "query": " OPTIMISING LINEAR NETWORKS /"
+    },
+    {
+        "query number": "76",
+        "query": " TRANSISTOR PHASE SPLITTING CIRCUITS /"
+    },
+    {
+        "query number": "77",
+        "query": " PLEASE SUPPLY INFORMATION PERTINENT TO THE USE OF SURFACE PRETREATMENT TO PREVENT SECONDARY EMISSION EFFECTS IN VALVES /"
+    },
+    {
+        "query number": "78",
+        "query": " I WISH TO HAVE DATA ABOUT THE DESIGN OF MECHANICAL BAND PASS FILTERS FOR GOOD PASS CHARACTERISTICS /"
+    },
+    {
+        "query number": "79",
+        "query": " MECHANISMS WHEREBY TRANSMISSION AT HIGH FREQUENCIES IS AFFECTED BY WEATHER AND TIME OF DAY /"
+    },
+    {
+        "query number": "80",
+        "query": " COULD YOU PLEASE GIVE ME ARTICLES ABOUT THE POSSIBILITIES OF GETTING RECTIFICATION USING METALLIC DEVICES /"
+    },
+    {
+        "query number": "81",
+        "query": " I WISH TO CALCULATE THE INDUCTANCE AND LOSS IN COILS MADE USING PRINTED CIRCUIT OR OTHER MINIATURIZATION IDEAS. A SUITABLE ARTICLE PLEASE /"
+    },
+    {
+        "query number": "82",
+        "query": " ANALYSIS OF NONLINEAR SYSTEMS USING PHASE PLANE TECHNIQUES /"
+    },
+    {
+        "query number": "83",
+        "query": " MINIATURE LOW NOISE HIGH GAIN HIGH IMPEDANCE AMPLIFIERS /"
+    },
+    {
+        "query number": "84",
+        "query": " CONTROL CHARACTERISTICS OF SAMPLING SERVO SYSTEMS /"
+    },
+    {
+        "query number": "85",
+        "query": " POWER SPECTRAL DENSITY DISTRIBUTION OBTAINED USING ANALOGUE TECHNIQUES /"
+    },
+    {
+        "query number": "86",
+        "query": " HIGH STABILITY HIGH INPUT IMPEDANCE TRANSISTORISED ANALOGUE AMPLIFIER /"
+    },
+    {
+        "query number": "87",
+        "query": " ELECTRONIC SPECIFIC HEAT OF A SUPERCONDUCTOR SHOWING A DISCONTINUITY AT THE SUPERCONDUCTING CRITICAL TEMPERATURE /"
+    },
+    {
+        "query number": "88",
+        "query": " AN ABSTRACT ON THE FIELD DISTRIBUTION SURROUNDING A CHARGED THIN CIRCULAR DISC RESTING ON AN INFINITE DIELECTRIC SLAB /"
+    },
+    {
+        "query number": "89",
+        "query": " TUNNEL DIODE CONSTRUCTION AND ITS ELECTRICAL CHARACTERISTICS EXPLAINED /"
+    },
+    {
+        "query number": "90",
+        "query": " ELECTRONIC DENSITY OF STATES AT THE SURFACE OF A SEMICONDUCTOR COMPARED WITH THAT AT DEPTH /"
+    },
+    {
+        "query number": "91",
+        "query": " RESISTIVITY OF METALLIC THIN FILMS RELATED TO SURFACE ROUGHNESS /"
+    },
+    {
+        "query number": "92",
+        "query": " THE PHENOMENON OF RADIATION CAUSED BY CHARGED PARTICLES MOVING IN VARYING ELECTRIC AND MAGNETIC FIELDS /"
+    },
+    {
+        "query number": "93",
+        "query": " HIGH FREQUENCY OSCILLATORS USING TRANSISTORS THEORETICAL TREATMENT AND PRACTICAL CIRCUIT DETAILS /"
+    }
+]
