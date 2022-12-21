@@ -4,8 +4,7 @@ from .tools import process_datasets
 import numpy as np
 
 class Dataset:
-    
-    enableData = {"cranfield", "CISI", "Cran100"}
+    enableData = {"cranfield", "cisi", "vaswani"}
     def __init__(self, name = "", freq_matrix=None, vocabulary=None):
         basePath = getcwd() + f"\\datasets\\"
         if not name == "":
@@ -15,13 +14,16 @@ class Dataset:
                 self.data = list(json.load(data_json))
                 data_json.close()
             if name in self.enableData:
-                self.enableOp = True
-                with open(basePath + f"{name}_query.json") as query_json:
-                    self.querys_data = list(json.load(query_json))
-                    query_json.close()
-                with open(basePath + f"{name}_rel.json") as rel_json:
-                    self.rel_data = list(json.load(rel_json))
-                    rel_json.close()
+                try:
+                    with open(basePath + f"{name}_query.json") as query_json:
+                        self.querys_data = list(json.load(query_json))
+                        query_json.close()
+                    with open(basePath + f"{name}_rel.json") as rel_json:
+                        self.rel_data = list(json.load(rel_json))
+                        rel_json.close()
+                    self.enableOp = True
+                except:
+                    self.enableOp = False  
             else: self.enableOp = False
         else:
             self.freq_matrix = freq_matrix

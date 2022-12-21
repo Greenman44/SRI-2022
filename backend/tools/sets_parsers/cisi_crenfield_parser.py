@@ -5,33 +5,36 @@ basePath = getcwd() + "\\datasets\\"
 def parse_docs_CISI_cranfield(file, name):
     lines = file.read()
     docs = []
+    token = ":)"
+    text  = ""
+    tdict = {}
+    id = "1"
     try:
-        for doc in lines.split(".I"):
-            token = ""
-            text    = ""
-            tdict = {}
-            for line in doc.split():
-                token = line
-                if token == ".T":
-                    tdict["id"]= text
+        for line in lines.split():
+            if token != "" and token == ".I" and len(tdict) > 0:
+                id = line
+                docs.append(tdict)
+                tdict = {}
+                token = ""
+                text = ""
+            token = line
+
+            if token == ".T":
+                    tdict["id"]= id
                     text = ""
-                elif token == ".A":
+            elif token == ".A":
                     tdict["tittle"]= text
                     text = ""
-                elif token == ".W":
+            elif token == ".W":
                     tdict["author"]= text
                     text = ""
-                elif token == ".X":
+            elif token == ".X":
                     tdict["body"] = text
                     text = ""
-                else:
+            else:
                     text += line + " "
-            docs.append(tdict)
-            token = ""
-            text = ""
-
-        with open(basePath + f"{name}_data.json","w") as f:
-            json.dump(docs, f,indent=4)
+            with open(basePath + f"{name}_data.json","w") as f:
+                json.dump(docs, f,indent=4)
     except:
         raise Exception("Bad file was given")
 

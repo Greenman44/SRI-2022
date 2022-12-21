@@ -1,3 +1,3 @@
 from .run import run
-
-__all__ = ["run"]
+from .tools import set_parser
+__all__ = ["run", "set_parser"]

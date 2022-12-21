@@ -33,7 +33,7 @@ def run(doc_set : str, model : str, query : str):
         current_model = _vectorial
     elif model == "LSIModel" or not (doc_set == current_doc_set):
         if _lsi == None:
-            _lsi = VectorialModel(current_dataset)
+            _lsi = LSIModel(current_dataset)
         current_model = _lsi
 
     else :

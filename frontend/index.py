@@ -1,7 +1,7 @@
 from tkinter import *
-from tkinter.messagebox import showinfo
+from tkinter.messagebox import showinfo, showerror
 from tkinter.ttk import *
-from backend import run
+from backend import run, set_parser
 import webbrowser
 from tkinter.font import Font, nametofont
 from tkinter import filedialog
@@ -18,7 +18,7 @@ class Google:
         self.window.geometry(tam)
         self.window.config(background="white")
         self.doc=None
-
+        self.current_names = []
         Label(
             self.window,
             text="Select the Dataset of documents to use in your search :",
@@ -61,11 +61,6 @@ class Google:
 
         modelchoosen.bind("<<ComboboxSelected>>", self.MessageForModel)
         modelchoosen.grid(column=3, row=5)
-        Label(
-            self.window,
-            text="                                             ",
-            background="white",
-        ).grid(column=4, row=5)
 
         queryLabel = Label(self.window, text="Introduce query:",background="white")
         queryLabel.grid(row=5, column=7)
@@ -87,7 +82,14 @@ class Google:
         button_exit = Button(self.window,
                      text = "Exit",
                      command = exit)
-  
+
+        self.cbDocs = BooleanVar()
+        self.cbDoc = Checkbutton(text="Document",variable=self.cbDocs,onvalue = True, offvalue = False).grid(column=1,row=9)
+        self.cbQuerys= BooleanVar()
+        self.cbQuery = Checkbutton(text="Query",variable=self.cbQuerys,onvalue = True, offvalue = False).grid(column=2,row=9)
+        self.cbRels= BooleanVar()
+        self.cbRel=Checkbutton(text="Relevans", variable=self.cbRels,onvalue = True, offvalue = False).grid(column=3,row=9)
+
         button_explore.grid(column = 0, row = 10)
   
         button_exit.grid(column = 0,row = 11)
@@ -114,15 +116,31 @@ class Google:
 
 
     def browseFiles(self):
-        self.filename = filedialog.askopenfilenames(initialdir = "/",
+        if self.cbDocs.get() == self.cbQuerys.get() == self.cbRels == 0:
+            showerror(title= "Load Error", message= "please select data to load (docs, querys, rels)")
+        self.files = filedialog.askopenfiles(initialdir = "/",
                                           title = "Select a File",
                                           filetypes = (("Json files",
                                                         "*.json*"),
                                                        ("all files",
                                                         "*.*")))
+        self.current_names = self.setCurrentName()
         # TODO: Pasarle esto al parser
       
-        
+    def setCurrentName(self):
+        names = set()
+        for file in self.files:
+            if "cran" in file.name:
+                name = "cranfield"
+            elif "cisi" in file.name or "CISI" in file.name:
+                name = "cisi"
+            elif "vaswani" in file.name:
+                name = "vaswani"
+            else:
+                showerror(title= "Load Error", message= "Bad file was given")
+            names.add(name)
+            set_parser(file, name=name, docs = self.cbDocs.get(), querys= self.cbQuerys.get(), rel= self.cbRels.get())
+        return names
 
     def on_configure(self,event):
     # update scrollregion after starting 'mainloop'
@@ -183,9 +201,12 @@ class Google:
             l=Label(self.frame, text= doc["body"],wraplength=1000,background="lightblue").grid(row=self.linkrow+1,column=0)
             
         except:
-            lb=Linkbutton(self.frame, text = doc["name"], command= lambda m=doc: self.OpenWindowDoc(m)).grid(row=self.linkrow,column=0)
-            l=Label(self.frame,text = doc["body"],wraplength=1000,background="lightblue").grid(row=self.linkrow+1,column=0)
-            
+            try:
+                lb=Linkbutton(self.frame, text = doc["name"], command= lambda m=doc: self.OpenWindowDoc(m)).grid(row=self.linkrow,column=0)
+                l=Label(self.frame,text = doc["body"],wraplength=1000,background="lightblue").grid(row=self.linkrow+1,column=0)
+            except:
+                lb=Linkbutton(self.frame, text = doc["id"], command= lambda m=doc: self.OpenWindowDoc(m)).grid(row=self.linkrow,column=0)
+                l=Label(self.frame,text = doc["body"],wraplength=1000,background="lightblue").grid(row=self.linkrow+1,column=0)
           
         
 
@@ -219,7 +240,7 @@ class Google:
             )
 
 listA = ["BooleanModel", "VectorialModel", "LSIModel"]
-listD = ["Prueba","cranfield", "20NewGroups"]
+listD = ["cranfield", "cisi", "vaswani"]
 
 class Linkbutton(Button):
     

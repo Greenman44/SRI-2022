@@ -87,7 +87,7 @@ def process_datasets(names : str) -> tuple :
             raise(e)
             
         documents = df["body"]
-        documents = documents.map(lambda x: re.sub('[,\.!?()1234567890=;:$%&#]', '', x))
+        documents = documents.map(lambda x: re.sub(r'[,\.!?()1234567890=;:$%&#]', '', x))
         documents = documents.map(lambda x: re.sub(r'[^a-zA-Z0-9.\s]', ' ', x))  # Replace all non-alphanumeric characters with space
         documents = documents.map(lambda x: re.sub(r'[^a-zA-Z0-9\s]', '', x))  # Remove all dots, e.g. U.S.A. becomes USA
         documents = documents.map(lambda x: x.lower())
