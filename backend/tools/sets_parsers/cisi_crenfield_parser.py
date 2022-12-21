@@ -13,6 +13,8 @@ def parse_docs_CISI_cranfield(file, name):
         for line in lines.split():
             if token != "" and token == ".I" and len(tdict) > 0:
                 id = line
+                if name == "cranfield":
+                    tdict["body"] = text
                 docs.append(tdict)
                 tdict = {}
                 token = ""
