@@ -4,6 +4,7 @@ from tkinter.ttk import *
 from backend import run
 import webbrowser
 from tkinter.font import Font, nametofont
+from tkinter import filedialog
 from tkinter.constants import DISABLED, NORMAL
 
 
@@ -11,7 +12,10 @@ class Google:
     def __init__(self, root : Tk):
         self.window = root
         self.window.title("Documents Finder")
-        self.window.geometry("1920x1024")
+        an = self.window.winfo_screenwidth()
+        al = self.window.winfo_screenheight()
+        tam = '%dx%d'%(an,al)
+        self.window.geometry(tam)
         self.window.config(background="white")
         self.doc=None
 
@@ -74,6 +78,22 @@ class Google:
         self.queryButton.grid(row=5, column=11)
         self.linkrow=7
 
+  
+      
+        button_explore = Button(self.window,
+                        text = "Browse Files",
+                        command = self.browseFiles)
+  
+        button_exit = Button(self.window,
+                     text = "Exit",
+                     command = exit)
+  
+        button_explore.grid(column = 0, row = 10)
+  
+        button_exit.grid(column = 0,row = 11)
+
+
+
         menubar=Menu(self.window)
         self.window.config(menu=menubar)
         
@@ -93,6 +113,15 @@ class Google:
         stateButton.grid(column=10,row=20, padx=20, pady=20)
 
 
+    def browseFiles(self):
+        self.filename = filedialog.askopenfilenames(initialdir = "/",
+                                          title = "Select a File",
+                                          filetypes = (("Json files",
+                                                        "*.json*"),
+                                                       ("all files",
+                                                        "*.*")))
+        # TODO: Pasarle esto al parser
+      
         
 
     def on_configure(self,event):
@@ -114,9 +143,7 @@ class Google:
         self.frame= Frame(self.canvas)
         self.canvas.create_window((0,10),window=self.frame, anchor='nw')
 
-        self.preclb=Label(self.window,self.window,
-            font=("Times New Roman", 10),
-            background="white").grid(column=4, row=5)
+
         
         # self.canvas.bind('<Configure>', self.on_configure)
 
@@ -129,6 +156,21 @@ class Google:
           self.queryButton["state"]=DISABLED
         except Exception as e :
           raise e
+        
+        self.preclb=Label(self.window,
+            text="Precision=" +  str(metrics[0]),
+            font=("Times New Roman", 10),
+            background="white").grid(column=0, row=25)
+        
+        self.recblb=Label(self.window,
+            text="Recovered=" + str(metrics[1]),
+            font=("Times New Roman", 10),
+            background="white").grid(column=0, row=26)
+
+        self.f1lb=Label(self.window,
+            text="F1=" + str(metrics[2]),
+            font=("Times New Roman", 10),
+            background="white").grid(column=0, row=27)
         
 
 

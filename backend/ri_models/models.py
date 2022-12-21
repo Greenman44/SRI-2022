@@ -52,15 +52,16 @@ class BooleanModel(Models):
         for doc in range(len(self.dataS)):
             bool_doc = {}
             for word in query_vocabulary:
-                if self.dataS[word,doc] > 0:
-                    bool_doc.update({word : true})
-                else:
-                    bool_doc.update({word : false})
+                try:
+                    freq=true if self.dataS[word,doc]>0 else false
+                except:
+                    freq=false
+                bool_doc.update({word:freq})
                 
             if bool_exp.subs(bool_doc):
                 result.append(doc)
         
-        return result
+        return result,(-1,-1,-1)
 
 
 class VectorialModel(Models):
